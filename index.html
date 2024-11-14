@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Kiểm tra user agent để xác định ứng dụng Facebook
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-            if (userAgent.includes("FBAN") || userAgent.includes("FBAV")) {
-                // Nếu mở từ app Facebook, chuyển hướng đến Shopee
-                window.location.href = "https://s.shopee.vn/2AxfMVpsmr";
-            } else {
-                // Nếu không phải app Facebook (tức là mở từ trình duyệt), chuyển hướng đến Facebook.com
-                window.location.href = "https://www.facebook.com";
-            }
-        });
-    </script>
+  <meta property="al:ios:url" content="shopee://s.shopee.vn/2AxfMVpsmr" />
+  <meta property="al:ios:app_store_id" content="idShopeeiOS" />
+  <meta property="al:android:url" content="shopee://s.shopee.vn/2AxfMVpsmr" />
+  <meta property="al:android:package" content="com.shopee.vn" />
+  <meta property="al:web:url" content="https://www.facebook.com" />
 </head>
-<body>
-</body>
+<body></body>
 </html>
