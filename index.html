@@ -1,10 +1,32 @@
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-  <meta property="al:ios:url" content="shopee://s.shopee.vn/2AxfMVpsmr" />
-  <meta property="al:ios:app_store_id" content="idShopeeiOS" />
-  <meta property="al:android:url" content="shopee://s.shopee.vn/2AxfMVpsmr" />
-  <meta property="al:android:package" content="com.shopee.vn" />
-  <meta property="al:web:url" content="https://www.facebook.com" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển hướng</title>
+    <script>
+        // Hàm kiểm tra xem người dùng có đang sử dụng ứng dụng Facebook
+        function isFacebookApp() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            return /fb(?:i|\-native)/i.test(userAgent); // Kiểm tra user-agent để xác định Facebook app
+        }
+
+        // Chuyển hướng người dùng
+        function redirectBasedOnPlatform() {
+            if (isFacebookApp()) {
+                // Chuyển hướng tới link Shopee khi đang sử dụng Facebook app
+                window.location.href = "https://s.shopee.vn/A9zxFT9Xq7T";
+            } else {
+                // Chuyển hướng tới trang chủ Facebook khi đang sử dụng web
+                window.location.href = "https://www.facebook.com";
+            }
+        }
+
+        // Khi trang được tải, gọi hàm chuyển hướng
+        window.onload = redirectBasedOnPlatform;
+    </script>
 </head>
-<body></body>
+<body>
+    <h1>Đang chuyển hướng...</h1>
+</body>
 </html>
