@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Redirect</title>
+</head>
+<body>
+    <script>
+        // URL chuyển hướng
+        const appLink = "https://s.shopee.vn/40PLYR0TxJ"; // Link cho app
+        const webLink = "https://www.facebook.com/";       // Link cho trình duyệt
+
+        // Kiểm tra môi trường thiết bị
+        const userAgent = navigator.userAgent.toLowerCase();
+
+        if (/android|iphone|ipad|ipod/i.test(userAgent)) {
+            // Chuyển hướng đến link app nếu là thiết bị di động
+            window.location.href = appLink;
+        } else {
+            // Chuyển hướng đến link web nếu không phải di động
+            window.location.href = webLink;
+        }
+    </script>
+</body>
+</html>
